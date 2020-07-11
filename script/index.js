@@ -9,10 +9,7 @@ function initGallery() {
 
 function slideChange() {
     for (let i = slides.length - 1; i > 0; i--) {
-        slides[i].addEventListener("click",
-            () => {
-                console.log(isPaused = !isPaused)
-            })
+        slides[i].addEventListener("click", () => { console.log(isPaused = !isPaused) })
     }
 
 
@@ -30,8 +27,6 @@ function mapSlideIndex() {
     if (slideIndex < 0) {
         slideIndex = slides.length - 1
 
-        slides[slideIndex].style.opacity = 1
-
         isPaused = true
 
         for (let i = slides.length - 1; i > 0; i--) {
@@ -40,10 +35,6 @@ function mapSlideIndex() {
 
         isPaused = false
     }
-}
-
-var unaFuncion = () => {
-    console.log('callback')
 }
 
 initGallery()
