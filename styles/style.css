@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 :root {
     --footer-displacement: 50px;
+    --background-primary: #033c71;
+    --background-dark: #02294d;
+    --background-contrast: white;
 }
 
 *, *::after, *::before {
     margin: 0;
     padding: 0;
-    background-color: #033c71;
+    background-color: var(--background-primary);
     color: white;
     font-family: 'Montserrat';
     font-size: 16px;
@@ -17,10 +20,15 @@
 
 a{
     font-weight: 700;
-    background-color: white;
-    color: #02294d;
+    background-color: var(--background-dark);
+    color: white;
     font-size: 0.75rem;
     border-radius: 5px;
+}
+
+a:hover{
+    background-color: var(--background-contrast);
+    color: var(--background-dark);
 }
 
 body {
@@ -61,7 +69,7 @@ body {
 }
 
 .header {
-    background-color: #02294d;
+    background-color: var(--background-dark);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -70,14 +78,14 @@ body {
 }
 
 .header>img {
-    background-color: #02294d;
+    background-color: var(--background-dark);
     box-sizing: border-box;
     padding: 10px;
     max-height: 100%;
 }
 
 .header>h1 {
-    background-color: #02294d;
+    background-color: var(--background-dark);
     margin: 0.5rem;
     font-size: 1rem;
     padding-bottom: 10px;
@@ -111,7 +119,7 @@ body {
 
 .element h2{
     width: 100%;
-    background-color: #02294d;
+    background-color: var(--background-dark);
     margin: 1rem 0;
     font-size: 1.2rem;
 }
@@ -148,7 +156,7 @@ body {
 .footer {
     height: var(--footer-displacement);
     width: 100%;
-    background-color: #02294d;
+    background-color: var(--background-dark);
     background-image: none;
     background-repeat: repeat;
     background-attachment: scroll;
@@ -165,13 +173,13 @@ body {
 .socials {
     width: calc(100% / 4);
     border-right: 1px solid rgba(255,255,255, 0.45);
-    background-color: #02294d;
+    background-color: var(--background-dark);
     height: 100%;
     text-align: center;
 }
 
 .socials>a {
-    background-color: #02294d;
+    background-color: var(--background-dark);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +187,7 @@ body {
 }
 
 .socials>a>img {
-    background-color: #02294d;
+    background-color: var(--background-dark);
     max-height: 60%;
 }
 
@@ -226,5 +234,9 @@ body {
 
     .element>a{
         justify-self: flex-end;
+    }
+
+    .footer a:hover{
+        height: 120%;
     }
 }
