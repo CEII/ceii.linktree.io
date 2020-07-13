@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 :root {
-    --footer-displacement: 65px;
+    --footer-displacement: 50px;
 }
 
 *, *::after, *::before {
@@ -11,10 +11,16 @@
     font-family: 'Montserrat';
     font-size: 16px;
     transition: 0.5s ease;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
+a{
+    font-weight: 700;
+    background-color: white;
+    color: #02294d;
+    font-size: 0.75rem;
+    border-radius: 5px;
 }
 
 body {
@@ -82,6 +88,38 @@ body {
     text-align: center;
 }
 
+.jumbotron>h1{
+    font-size: 1.3rem;
+}
+
+.jumbotron .container.elements{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.element h2{
+    width: 100%;
+    background-color: #02294d;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.element p{
+    font-size: 0.7rem;
+}
+
 .container {
     display: flex;
     margin: 1.5rem 0;
@@ -92,17 +130,17 @@ body {
 }
 
 .container p {
+    text-align: left;
     margin: 5px;
     font-size: 0.75rem;
 }
 
 .container a {
-    margin: 5px;
-    font-size: 0.75rem;
-    text-decoration: underline;
+    padding: 7px;
+    margin: 0.8rem;
 }
 
-.container .tor {
+.container .banner {
     width: 100vw;
     margin: 1rem;
 }
@@ -156,13 +194,37 @@ body {
 
     .galleryCarousel {
         margin: 1rem;
-        width: 45vw;
-        height: 45vw;
+        width: 40vw;
+        height: 40vw;
         user-select: none;
         box-sizing: border-box;
     }
 
-    .container .tor {
-        width: 70vw;
+    .jumbotron{
+        margin: 1.5rem;
+    }
+
+    .container{
+        margin-top: 2rem;
+    }
+
+    .container .banner {
+        width: 65vw;
+    }
+
+    .container.elements{
+        flex-flow: row nowrap;
+        height: 55vh;
+    }
+
+    .element{
+        margin: 0 0.8rem;
+        height: 100%;
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    .element>a{
+        justify-self: flex-end;
     }
 }
