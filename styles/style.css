@@ -24,6 +24,7 @@ a{
     color: white;
     font-size: 0.75rem;
     border-radius: 5px;
+    text-align: center;
 }
 
 a:hover{
@@ -126,7 +127,18 @@ body {
 }
 
 .element p{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     font-size: 0.7rem;
+}
+
+.element.vertical > img{
+    width: 100%;
+}
+
+.element.vertical .desc > p > a{
+    width: 50%;
 }
 
 .container {
@@ -210,7 +222,7 @@ body {
     }
 
     .jumbotron{
-        margin: 1.5rem;
+        margin: 0.5rem;
     }
 
     .container{
@@ -222,6 +234,7 @@ body {
     }
 
     .container.elements{
+        margin: 0.5rem;
         flex-flow: row nowrap;
     }
 
@@ -238,5 +251,23 @@ body {
 
     .footer a:hover{
         height: 120%;
+    }
+
+    .element.vertical {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
+
+    .element.vertical .desc {
+        width: 55%;
+    }
+
+    .element.vertical .desc a{
+        margin: 3rem;
+    }
+
+    .element.vertical img {
+        width: 33%;
     }
 }
